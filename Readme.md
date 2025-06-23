@@ -34,6 +34,7 @@ template-react-ts/
 │   ├── App.tsx
 │   ├── index.css
 │   └── main.tsx
+├── .gitattributes
 ├── .gitignore
 ├── .prettierrc
 ├── .prettierignore
