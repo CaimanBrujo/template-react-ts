@@ -31,22 +31,27 @@ template-react-ts/
 ├── public/
 ├── src/
 │   ├── assets/
+│   ├── components/
+│   │   ├── Footer.tsx
+│   │   └── Header.tsx
 │   ├── App.tsx
 │   ├── index.css
-│   └── main.tsx
+│   ├── main.tsx
+│   └── vite-env.d.ts
 ├── .gitattributes
 ├── .gitignore
-├── .prettierrc
 ├── .prettierignore
+├── .prettierrc
 ├── eslint.config.js
 ├── index.html
 ├── LICENSE
+├── package-lock.json
 ├── package.json
 ├── postcss.config.js
 ├── Readme.md
 ├── tailwind.config.ts
-├── tsconfig.json
 ├── tsconfig.app.json
+├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
 ```
