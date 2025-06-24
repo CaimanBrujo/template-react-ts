@@ -1,3 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #0f0f0f;
+  --color-text: #f1f1f1;
+}
+
+@layer utilities {
+}
