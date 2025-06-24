@@ -44,7 +44,7 @@ template-react-ts/
 ├── package.json
 ├── postcss.config.js
 ├── Readme.md
-├── tailwind.config.js
+├── tailwind.config.ts
 ├── tsconfig.json
 ├── tsconfig.app.json
 ├── tsconfig.node.json
