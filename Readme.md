@@ -19,6 +19,7 @@ npm run preview  # Preview production build
 - **TypeScript 5.8**
 - **Vite 6**
 - **Tailwind CSS v4**
+- **Lucide React (icons)**
 - **ESLint 9**
 - **Prettier 3**
 
@@ -33,7 +34,8 @@ template-react-ts/
 │   ├── assets/
 │   ├── components/
 │   │   ├── Footer.tsx
-│   │   └── Header.tsx
+│   │   ├── Header.tsx
+│   │   └── ThemeToggle.tsx
 │   ├── App.tsx
 │   ├── index.css
 │   ├── main.tsx
@@ -58,6 +60,19 @@ template-react-ts/
 
 ---
 
+## Icons with Lucide
+
+This template includes [Lucide](https://lucide.dev/icons) for using icons as React components.
+
+Example usage:
+
+```tsx
+import { Sun, Moon } from 'lucide-react'
+;<Sun className="w-5 h-5 text-[--color-text]" />
+```
+
+---
+
 ## Recommended VS Code Extensions
 
 To get the best developer experience:
@@ -66,5 +81,6 @@ To get the best developer experience:
 - **Prettier – Code formatter** – by Prettier
 - **Tailwind CSS IntelliSense** – by Tailwind Labs
 - **PostCSS Language Support** – by csstools
+- **Lucide Icons (optional preview)** – by Lucide.dev
 
 ---
