@@ -6,25 +6,27 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     const html = document.documentElement
-    setIsLight(html.classList.contains('light'))
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme === 'light') {
+      html.classList.add('light')
+      setIsLight(true)
+    }
   }, [])
 
   const toggleTheme = () => {
     const html = document.documentElement
     html.classList.toggle('light')
-    setIsLight(!isLight)
+    const isNowLight = html.classList.contains('light')
+    localStorage.setItem('theme', isNowLight ? 'light' : 'dark')
+    setIsLight(isNowLight)
   }
 
   return (
-    <button
-      onClick={toggleTheme}
-      aria-label="Toggle Theme"
-      className="p-2 rounded-full border border-[--color-border] bg-[--color-background] hover:bg-[--color-accent-soft] transition-colors"
-    >
+    <button onClick={toggleTheme} aria-label="Toggle Theme">
       {isLight ? (
-        <Moon className="w-5 h-5 text-[--color-text]" />
+        <Moon className="w-5 h-5 text-text hover:text-accent-soft transition-opacity duration-300" />
       ) : (
-        <Sun className="w-5 h-5 text-[--color-text]" />
+        <Sun className="w-5 h-5 text-text hover:text-accent-soft transition-opacity duration-300" />
       )}
     </button>
   )

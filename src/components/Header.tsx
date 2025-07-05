@@ -2,12 +2,13 @@ import ThemeToggle from './ThemeToggle'
 
 export default function Header() {
   return (
-    <header className="w-full bg-[--color-background] text-[--color-text] py-4 px-6 border-b border-[--color-border] flex items-center">
-      <div className="flex-1" />
-
+    <header
+      role="banner"
+      className="w-full h-20 px-4 sm:px-6 border-b border-border flex items-center justify-center relative fade-in"
+    >
       <h1 className="text-xl font-semibold">React + Vite + Tailwind CSS</h1>
 
-      <div className="flex-1 flex justify-end">
+      <div className="absolute right-4 sm:right-6">
         <ThemeToggle />
       </div>
     </header>

@@ -1,14 +1,16 @@
 import Header from './components/Header'
+import Main from './components/Main'
 import Footer from './components/Footer'
+import React from 'react'
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-text">
       <Header />
-      <main className="flex-1 flex items-center justify-center">
-        <h1 className="text-2xl font-bold">MAIN</h1>
-      </main>
+      <Main />
       <Footer />
     </div>
   )
 }
+
+export default App
