@@ -16,7 +16,7 @@ export default [
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: path.resolve('./tsconfig.json'),
+        project: path.resolve('./tsconfig.eslint.json'),
         tsconfigRootDir: path.resolve()
       },
       globals: globals.browser
@@ -35,6 +35,23 @@ export default [
         { allowConstantExport: true }
       ],
       'prettier/prettier': 'warn'
+    }
+  },
+
+  {
+    files: ['**/__tests__/**/*.{ts,tsx}', '**/*.test.{ts,tsx}'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        project: path.resolve('./tsconfig.eslint.json'),
+        tsconfigRootDir: path.resolve()
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.jest
+      }
     }
   }
 ]

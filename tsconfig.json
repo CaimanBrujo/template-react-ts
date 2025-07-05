@@ -17,7 +17,14 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "types": ["jest", "@testing-library/jest-dom"]
   },
-  "include": ["src", "tailwind.config.ts", "vite.config.ts"]
+  "include": [
+    "src",
+    "tailwind.config.ts",
+    "vite.config.ts",
+    "jest.config.cjs",
+    "jest.setup.ts"
+  ]
 }
